@@ -18,8 +18,9 @@ a{
     color: white;
 }
 
-header{
-    position:absolute;
+/* Top Navbar */
+ header{
+    position:fixed;
     top: 0;
     left: 0;
     z-index: 10;
@@ -27,45 +28,29 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #fff;
-    padding: 35px 100px;
+    color: #000;
+    background-color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 
-}
-header h2{
-    text-transform: uppercase;
-}
+} 
 
 header nav{
     display:flex;
 }
 
-header nav li {
-    margin: 0px 15px;
+header nav a {
+    color: #000;
+    padding: 16px 16px;
 }
 
-header nav li:first-child{
-    margin-left: 0
-}
-
-header nav li:last-child{
-    margin-right: 0
-}
-
-@media(max-width: 1000px){
-    header{
-        padding: 20px 50px;
-    }
+header nav a:hover{
+    background: #ddd;
+    color: black;
 }
 
 @media(max-width: 700px){
     header{
         flex-direction: column;
-    }
-    header h2 {
-        margin-bottom: 15px;
-    }
-    header nav li{
-        margin: 0 7px;
     }
 }
 
@@ -108,7 +93,7 @@ section p{
 }
 
 .banner-area .banner-img{
-    background-image: url(images/glasses-cropped.jpg);
+    background-image: url(images/sky.jpg);
     position: absolute;
     top: 0;
     left: 0;
@@ -178,27 +163,25 @@ ul.about-content{
 
 .about-content li{
     padding: 20px;
-    height: 290px;
     background-clip: content-box;
     background-size: cover;
     background-position: center;
-
 }
 
 .about-left {
     flex-basis: 40%;
+    height: 300px;
     background-image: url(images/mendi-office.jpg);
     background-size: cover;
 }
 
 .about-right{
     flex-basis:60%;
+    overflow: auto;
 }
 
 .about-area p{
     max-width: 800px;
-    margin-bottom: 35px;
-    padding-bottom: 35px;
     line-height: 1.5;
     text-align: left;
     padding-left: 0;
@@ -228,10 +211,8 @@ ul.about-content{
         padding: 8px;
         
     }
-
     .section-title{
         font-size: 32px;
-        margin-bottom: 0;
     }
 
     .about-area{
@@ -239,3 +220,23 @@ ul.about-content{
     }
 }
 
+/* Sprint 1 */
+
+#sprint-1{
+    background:	#ddd;
+    display: flex;
+}
+
+.sprint-1-content p{
+    text-align: left;
+    padding: 15px;
+    margin: 0;
+    flex-basis: 100%;
+}
+
+@media (max-width: 1000px){
+    .sprint-1-area{
+        padding-top: 20px;
+    }
+
+}
