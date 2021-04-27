@@ -28,17 +28,29 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #000;
     background-color: #fff;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-
 } 
 
-header nav{
+.navbar{
     display:flex;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
 }
 
-header nav a {
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li{
+    display: inline;
+}
+
+.navbar-links li a {
+    display: block;
     color: #000;
     padding: 16px 16px;
 }
@@ -48,10 +60,82 @@ header nav a:hover{
     color: black;
 }
 
-@media(max-width: 700px){
+/* Toggle button for small screens */
+.toggle-button{
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+/* The 3 horizontal lines */
+.toggle-button .bar{
+    height: 4px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+
+/* If width <= 600px */
+@media(max-width: 600px) {
     header{
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Display .toggle-button */
+    .toggle-button{
+        display: flex;
+    }
+
+    /* Navbar inactive = height only 50px */
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        height: 50px;
+    }
+    /* If toggle-bar inactive then remove .navbar-links */
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+
+    /* To account for the space the toggle-button takes up */
+    .navbar-links ul li:first-child{
+        margin-top: 50px;
+    }
+    /* Aligning all list items in the center and with the correct padding */
+    .navbar-links li{
+        text-align: center;
+    }
+    .navbar-links li a {
+        padding: 0.5rem 1rem;
+    }
+    .navbar-links ul{
+        width: 100%;
         flex-direction: column;
     }
+
+    /* If you click on the toggle-button, opens navbar-links */
+    .navbar-links.active{
+        display: flex;
+    }
+
+    /* If navbar active then allow it to become bigger */
+    .navbar.active{
+        height: auto;
+    }
+
+    /* Prevents issue of navbar covering up the title */
+    .section-title{
+        margin-top: 15%;
+    }
+
 }
 
 /* Banner Area */
@@ -153,7 +237,6 @@ section p{
 }
 
 /* About Area */
-
 ul.about-content{
     width: 100%;
     display:flex;
@@ -215,15 +298,66 @@ ul.about-content{
         font-size: 32px;
     }
 
-    .about-area{
+    .about-area, .sprint-1-area, .features-area{
         padding-top: 20px;
     }
 }
 
+/* Features Area */
+
+#features{
+    background: #ddd;
+}
+
+ul.features-content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.features-content li{
+    padding:50px 30px;
+    flex-basis: 33%;
+    text-align: center;
+
+}
+
+.features-content li h4{
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.features-content li p{
+    margin: 0;
+}
+
+@media (max-width: 1000px){
+
+    .features-content li{
+        flex-basis: 100%;
+        margin-bottom: 10;
+        padding-bottom: 10px;
+    }
+
+    .features-content li:last-child{
+        margin-bottom: 0;
+    }
+
+    .features-content li p{
+        padding: 0;
+    }
+
+    .features-area{
+        padding-top: 20px;
+    }
+}
+
+
 /* Sprint 1 */
 
 #sprint-1{
-    background:	#ddd;
+    background:	#fff;
     display: flex;
 }
 
@@ -232,11 +366,4 @@ ul.about-content{
     padding: 15px;
     margin: 0;
     flex-basis: 100%;
-}
-
-@media (max-width: 1000px){
-    .sprint-1-area{
-        padding-top: 20px;
-    }
-
 }

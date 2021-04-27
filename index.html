@@ -4,16 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type = "text/css" rel="stylesheet" href="style.css">
+    <script src="top-navbar.js" defer></script>
     <title>II1305 Project</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
 </head>
 <body>
     <header>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#about">About</a>
-            <a href="#features">Features</a>
-            <a href="#contact">Contact</a>
-            
+        <nav class="navbar">
+            <a href="#" onclick="return false;" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="#" >Home</a></li>
+                    <li><a href="#about" >About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+        </div>
         </nav>
     </header>
 
@@ -35,6 +47,27 @@
             </li>
         </ul>
     </section>
+
+
+    <!-- Features -->
+    <section class="features-area" id="features">
+        <h3 class="section-title">Features</h3>
+        <ul class="features-content">
+            <li>
+                <h4>App for IOS and Android</h4>
+                <p>Using Swift and Kotlin, we created an advanced application capable of exporting data from a database and displaying graphs to summarise your personal data. Allowing you to see your neurological progress</p>
+            </li>
+            <li>
+                <h4>Responsive Web App</h4>
+                <p>Using our Responsive web app you are capable of seeing your data from any device, anywhere!</p>
+            </li>
+            <li>
+                <h4>Machine Learning</h4>
+                <p>We use an advanced machine learning algorithm in order to recommend to you how to improve your life</p>
+            </li>
+        </ul>
+    </section>
+
 
     <!-- Sprint 1 Section -->
     <section class="sprint-1-area" id="sprint-1">
