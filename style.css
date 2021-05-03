@@ -135,8 +135,15 @@ header nav a:hover{
     .section-title{
         margin-top: 15%;
     }
-
 }
+
+/* IPad size  */
+@media(max-width: 768px) {
+    .section-title{
+        margin-top: 10%;
+    }
+}
+
 
 /* Banner Area */
 section{
@@ -298,7 +305,8 @@ ul.about-content{
         font-size: 32px;
     }
 
-    .about-area, .sprint-1-area, .features-area{
+    /* All Sections  */
+    .about-area, .sprint-1-area,.sprint-2-area, .features-area{
         padding-top: 20px;
     }
 }
@@ -354,6 +362,15 @@ ul.features-content{
 }
 
 
+/* All Sprints */
+
+.sprint-1-content p, .sprint-2-content p{
+    text-align: left;
+    padding: 15px;
+    margin: 0;
+    flex-basis: 100%;
+}
+
 /* Sprint 1 */
 
 #sprint-1{
@@ -361,9 +378,9 @@ ul.features-content{
     display: flex;
 }
 
-.sprint-1-content p{
-    text-align: left;
-    padding: 15px;
-    margin: 0;
-    flex-basis: 100%;
+/* Sprint 2 */
+
+#sprint-2{
+    background:	#ddd;
+    display: flex;
 }
