@@ -306,7 +306,7 @@ ul.about-content{
     }
 
     /* All Sections  */
-    .about-area, .sprint-1-area,.sprint-2-area, .features-area{
+    .about-area, .sprint-1-area,.sprint-2-area, .sprint-3-area, .sprint-4-area, .features-area, .contact-area{
         padding-top: 20px;
     }
 }
@@ -364,23 +364,37 @@ ul.features-content{
 
 /* All Sprints */
 
-.sprint-1-content p, .sprint-2-content p{
+.sprint-1-content p, .sprint-2-content, .sprint-3-content, .sprint-4-content p{
     text-align: left;
     padding: 15px;
     margin: 0;
     flex-basis: 100%;
 }
 
-/* Sprint 1 */
+/* Sprint 1 and 3*/
 
-#sprint-1{
+#sprint-1, #sprint-3{
     background:	#fff;
     display: flex;
 }
 
-/* Sprint 2 */
+/* Sprint 2 and 4*/
 
-#sprint-2{
+#sprint-2, #sprint-4{
     background:	#ddd;
     display: flex;
+}
+
+/* Contact */
+.contact-content{
+text-align: left;
+padding: 15px;
+margin: 0;
+flex-basis: 100%;
+}
+
+.contact-content a{
+    color: blue;
+    text-decoration: underline;
+    
 }
